@@ -1,0 +1,66 @@
+seed: 42
+ref_size: 320
+radius: 2.0
+fovy: 49.1
+min_ver: -30
+max_ver: 30
+invert_bg_prob: 0.5
+num_pts: 5000
+initial_steps: 75
+refinement:
+  steps: 100
+  strength: 0.60
+  inversion_guidance_scale: 1.0
+  guidance_scale: 4.0
+coarse:
+  iters: 800
+  lambda_pixel: 10000.0
+  lambda_mask: 1000.0
+  lambda_sds: 1.0
+  position_lr_init: 0.001
+  position_lr_final: 0.00002
+  position_lr_max_steps: 500
+  feature_lr: 0.01
+  opacity_lr: 0.05
+  scaling_lr: 0.005
+  rotation_lr: 0.005
+  percent_dense: 0.01
+  density_start_iter: 100
+  density_end_iter: 400
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  opacity_reset_interval: 500
+final:
+  iters: 1500
+  position_lr_init: 0.001
+  position_lr_final: 0.00002
+  position_lr_max_steps: 1500
+  feature_lr: 0.01
+  opacity_lr: 0.05
+  scaling_lr: 0.005
+  rotation_lr: 0.005
+  percent_dense: 0.01
+  density_start_iter: 100
+  density_end_iter: 400
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  remove_outliers_interval: 400
+  max_gaussian_scale: 0.06
+  max_gaussian_anisotropy: 10.0
+  final_prune_min_opacity: 0.02
+  sds_min_timestep_ratio: 0.02
+ergo:
+  lambda_rgb: 10000.0
+  lambda_depth: 10.0
+  lambda_mask: 1000.0
+  lambda_texture: 1.0
+  visibility_dilation_kernel: 5
+  discrepancy_sigma: 0.1
+  weight_sensitivity: 3.0
+  hessian_damping: 0.001
+  risk_update_interval: 10
+  gaussian_kernel_size: 5
+  gaussian_sigma: 1.0
+  min_geometry_weight_sum: 0.1
+  min_texture_weight_sum: 0.1
+  eps: 0.00000001

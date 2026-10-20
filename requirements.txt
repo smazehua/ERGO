@@ -1,0 +1,17 @@
+# Install the matching CUDA wheels first (README section 2).
+torch==2.7.1
+torchvision==0.22.1
+diffusers==0.39.0
+transformers==5.15.1
+accelerate==1.14.0
+numpy==2.2.6
+Pillow==12.3.0
+plyfile==1.1.5
+rembg[cpu]==2.0.69
+onnxruntime>=1.21,<2
+PyYAML>=6.0,<7
+scipy>=1.13
+packaging>=24
+opencv-python-headless>=4.10
+iopath==0.1.10
+# Build PyTorch3D, simple_knn, and the four-output rasterizer separately; see README section 3.
